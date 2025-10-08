@@ -19,14 +19,17 @@ export default function Nav() {
 
                 {/* Desktop Menu */}
                 <nav className="hidden md:flex gap-6 items-center">
-                    <Link href="/" className="hover:text-[#9F62F2] transition">
+                    <Link href="/" className="hover:text-[#9F62F2] transition font-semibold">
                         Home
                     </Link>
-                    <Link href="/apps" className="hover:text-[#9F62F2] transition">
+                    <Link href="/apps" className="hover:text-[#9F62F2] transition font-semibold">
                         Apps
                     </Link>
-                    <Link href="/installation" className="hover:text-[#9F62F2] transition">
+                    <Link href="/installation" className="hover:text-[#9F62F2] transition font-semibold">
                         Installation
+                    </Link>
+                    <Link href="/addToApps" className="hover:text-[#9F62F2] transition font-semibold">
+                        Add To Apps
                     </Link>
 
 
@@ -76,11 +79,18 @@ export default function Nav() {
                         >
                             Installation
                         </Link>
+                        <Link
+                            href="/addToApps"
+                            className="hover:text-[#9F62F2] transition"
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            Add To Apps
+                        </Link>
                         <a
                             href="https://github.com/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-[#9F62F2] text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-[#8c4ee3] transition"
+                            className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-[#8c4ee3] transition"
                             onClick={() => setMenuOpen(false)}
                         >
                             <FaGithub size={20} /> Contribute
