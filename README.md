@@ -35,7 +35,7 @@ A modern web app built with **Next.js**, **Tailwind CSS**, and **MongoDB** to di
 ---
 
 ### Home
-![Home]([https://i.imgur.com/AiQy3Fv.png](https://i.ibb.co.com/bgLthMTZ/Screenshot-2025-10-16-235341.png))
+![Home](https://i.ibb.co.com/bgLthMTZ/Screenshot-2025-10-16-235341.png)
 
 
 ---
