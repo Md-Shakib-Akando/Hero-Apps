@@ -1,6 +1,7 @@
 # Hero Apps - Discover & Share Mobile Apps
 
-[Live Demo](#)  https://hero-apps-alpha.vercel.app/
+[Live Demo](https://hero-apps-alpha.vercel.app/)
+
 ---
 A modern web app built with **Next.js**, **Tailwind CSS**, and **MongoDB** to discover, explore, and submit mobile apps. Users can browse trending and top-rated apps, see customer reviews, and add new apps through a fully functional form.
 
@@ -35,7 +36,7 @@ A modern web app built with **Next.js**, **Tailwind CSS**, and **MongoDB** to di
 ## Screenshots
 
 
-![Home Page](./screenshots/home.png)  
+![Home Page](https://i.ibb.co.com/bgLthMTZ/Screenshot-2025-10-16-235341.png)  
 
 
 ---
