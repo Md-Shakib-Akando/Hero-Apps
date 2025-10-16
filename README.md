@@ -4,6 +4,11 @@
 Live link: https://hero-apps-alpha.vercel.app/  
 
 ---
+
+### Home
+![Home](https://i.ibb.co.com/bgLthMTZ/Screenshot-2025-10-16-235341.png)
+
+---
 A modern web app built with **Next.js**, **Tailwind CSS**, and **MongoDB** to discover, explore, and submit mobile apps. Users can browse trending and top-rated apps, see customer reviews, and add new apps through a fully functional form.
 
 ---
@@ -31,11 +36,6 @@ A modern web app built with **Next.js**, **Tailwind CSS**, and **MongoDB** to di
 - **Backend:** Next.js API Routes, MongoDB (Atlas)  
 - **UI & Components:** React Icons, ApexCharts, Toastify  
 - **Deployment:** Vercel / Render  
-
----
-
-### Home
-![Home](https://i.ibb.co.com/bgLthMTZ/Screenshot-2025-10-16-235341.png)
 
 
 ---
