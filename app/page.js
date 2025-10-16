@@ -2,7 +2,9 @@ import Image from "next/image";
 import playStore from '../public/assets/Group (1).png'
 import appStore from '../public/assets/Group (2).png'
 import Hero from '../public/assets/hero.png'
-import AppCards from "./components/AppCard/page";
+import TrendingApps from "./components/TrendingApps/page";
+import CustomerReviews from "./components/CustomersReview/page";
+import Contact from "./components/Contact/page";
 export default function Home() {
   return (
     <main className="pt-15 bg-[#efeeee]">
@@ -43,10 +45,16 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className=" mt-20 max-w-11/12 mx-auto pb-20">
+      <section className=" mt-8 max-w-11/12 mx-auto pb-5">
         <h1 className="text-center text-4xl md:text-6xl font-bold">Trending Apps</h1>
         <p className="text-center mb-6 mt-8 text-lg lg:text-xl text-gray-500">Explore All Trending Apps on the Market developed by us</p>
-        <AppCards></AppCards>
+        <TrendingApps></TrendingApps>
+      </section>
+      <section className=" bg-white ">
+        <CustomerReviews></CustomerReviews>
+      </section>
+      <section>
+        <Contact></Contact>
       </section>
     </main>
   );

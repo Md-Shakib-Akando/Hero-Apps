@@ -1,10 +1,12 @@
 "use client"
 import React from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function AppsForm() {
     async function onsubmit(e) {
         e.preventDefault();
-        alert("Form submitted! Check console for data.");
+
         const formData = new FormData(e.currentTarget);
 
         const imageFile = formData.get("image");
@@ -23,8 +25,9 @@ export default function AppsForm() {
                 const uploadResult = await uploadRes.json();
                 if (uploadResult.success) {
                     imageUrl = uploadResult.data.url;
+
                 } else {
-                    alert("❌ Image upload failed");
+                    toast.error("Image upload failed");
                     return;
                 }
             }
@@ -43,8 +46,11 @@ export default function AppsForm() {
         });
 
         const result = await res.json();
-        if (result.success) alert("✅ App saved successfully!");
-        else alert("❌ Error: " + (result.errors ? result.errors.join(", ") : result.message));
+        if (result.success) {
+            toast.success("App add successfully!");
+            e.currentTarget.reset();
+        }
+        else toast.error("Error: " + (result.errors ? result.errors.join(", ") : result.message));
     }
 
     return (
@@ -53,7 +59,7 @@ export default function AppsForm() {
 
             <form onSubmit={onsubmit} className="space-y-6">
                 <div className="lg:grid lg:grid-cols-2 lg:gap-6 space-y-6 lg:space-y-0">
-                    {/* Image File */}
+
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                             App Image
@@ -67,7 +73,7 @@ export default function AppsForm() {
                         />
                     </div>
 
-                    {/* Title */}
+
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                             App Title
@@ -81,7 +87,6 @@ export default function AppsForm() {
                         />
                     </div>
 
-                    {/* Company Name */}
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                             Company Name
@@ -95,7 +100,7 @@ export default function AppsForm() {
                         />
                     </div>
 
-                    {/* ID */}
+
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                             App ID
@@ -109,7 +114,7 @@ export default function AppsForm() {
                         />
                     </div>
 
-                    {/* Size */}
+
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                             Size (MB)
@@ -123,7 +128,7 @@ export default function AppsForm() {
                         />
                     </div>
 
-                    {/* Reviews */}
+
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                             Number of Reviews
@@ -137,7 +142,7 @@ export default function AppsForm() {
                         />
                     </div>
 
-                    {/* Rating Average */}
+
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                             Average Rating
@@ -161,7 +166,6 @@ export default function AppsForm() {
                         </select>
                     </div>
 
-                    {/* Downloads */}
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                             Downloads
@@ -176,7 +180,7 @@ export default function AppsForm() {
                     </div>
                 </div>
 
-                {/* Description - Full Width */}
+
                 <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                         Description
@@ -215,7 +219,6 @@ export default function AppsForm() {
                     </div>
                 </div>
 
-                {/* Submit Button */}
                 <div className="pt-6">
                     <button
                         type="submit"
@@ -225,6 +228,18 @@ export default function AppsForm() {
                     </button>
                 </div>
             </form>
+            <ToastContainer
+                position="top-right"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
+
         </div>
     )
 }

@@ -25,11 +25,9 @@ export default function Nav() {
                     <Link href="/apps" className="hover:text-[#9F62F2] transition font-semibold">
                         Apps
                     </Link>
-                    <Link href="/installation" className="hover:text-[#9F62F2] transition font-semibold">
-                        Installation
-                    </Link>
+
                     <Link href="/addToApps" className="hover:text-[#9F62F2] transition font-semibold">
-                        Add To Apps
+                        Add Apps
                     </Link>
 
 
@@ -72,19 +70,13 @@ export default function Nav() {
                         >
                             Apps
                         </Link>
-                        <Link
-                            href="/installation"
-                            className="hover:text-[#9F62F2] transition"
-                            onClick={() => setMenuOpen(false)}
-                        >
-                            Installation
-                        </Link>
+
                         <Link
                             href="/addToApps"
                             className="hover:text-[#9F62F2] transition"
                             onClick={() => setMenuOpen(false)}
                         >
-                            Add To Apps
+                            Add Apps
                         </Link>
                         <a
                             href="https://github.com/"
