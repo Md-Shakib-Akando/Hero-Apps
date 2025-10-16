@@ -18,7 +18,8 @@ A modern web app built with **Next.js**, **Tailwind CSS**, and **MongoDB** to di
 - Discover trending and top-rated apps with ratings and download counts  
 - Submit new apps with image upload, description, and ratings breakdown  
 - Dynamic display of all apps in a card layout  
-- Search functionality to filter apps by title or description  
+- Search functionality to filter apps by title or description
+- Click on any app card to view detailed information and customer reviews
 - Customer reviews and testimonials section  
 - Interactive charts for rating visualization using ApexCharts  
 - Global loading indicator during route transitions  
